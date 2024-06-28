@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Shoppers</title>
+</head>
+<body>
+    <h1>Available Shoppers</h1>
+    <ul>
+	    {% for shopper in shoppers %}
+	    <li>
+		    {{ shopper[1] }} - {{ shopper[2] }} - {{ shopper[3] }} - ${{ shopper[4] }}
+		    <a href="{{ url_for('select_shopper', id=shopper[0]) }}">Select</a>
+	    </li>
+	    {% endfor %}
+    </ul>
+</body>
+</html>
